@@ -22,5 +22,5 @@ model MenuItem {
   name  String
   parentId Int?
   parent MenuItem? @relation("ParentChild", fields: [parentId], references: [id], onDelete: Cascade) 
-  children MenuItem[] @relation("ParentChild", onDelete: Cascade) 
+  children MenuItem[] @relation("ParentChild") 
 }
